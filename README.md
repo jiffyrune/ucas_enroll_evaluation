@@ -1,5 +1,5 @@
 # UCAS_enroll_evaluation: 中国科学院大学自动刷课、评教脚本
-
+<font color="red">[Warning]英语B需要同时选课，请不要用来选英语B【笑</font>
 ## 环境依赖
 运行环境：Python 3.3-3.6
 
