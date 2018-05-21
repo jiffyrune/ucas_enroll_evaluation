@@ -202,7 +202,12 @@ class UCASEvaluate:
             exit()
 
         soup = BeautifulSoup(response.text, 'html.parser')
-        courseTable = soup.body.form.table.find_all('tr')[1:]
+        try:
+            courseTable = soup.body.form.table.find_all('tr')[1:]
+        except AttributeError:
+            print("未开通选课")
+            return
+
         courseDict = dict([(c.span.contents[0], c.span['id'].split('_')[1])
                            for c in courseTable])
 
